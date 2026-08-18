@@ -198,3 +198,5 @@ cython_debug/
 
 dataset/
 gemini.md
+
+idea/

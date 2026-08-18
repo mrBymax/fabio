@@ -12,6 +12,11 @@ The constraints are:
 2. Positional quotas: Ax = b such as, with 3 GK, 8 D, 8 C and 6 A (25 players)
 3. Binary bounds (0 <= x_i <= 1)
 
+Also, don't forget I am competing against other players. So we can model this as a game theory problem, with:
+1. Realistic price modeling (FVM-to-500)
+2. VORP (Value Over Replacement Player) where value is relative to the worst drafted player in the list
+3. Dynamic Live-Action Re-Optimiser: where we Re-solve MILP after every player is bought.
+
 ## The Structure:
 - The Pre-season squad builder (namely, phase_1)
 - The Pre-match formation builder (namely, phase_2)

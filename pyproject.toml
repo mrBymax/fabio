@@ -1,12 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "fabio"
 version = "0.1.0"
-requires-python = ">=3.14"
-dependencies = [
-    "beautifulsoup4>=4.15.0",
-    "pandas>=3.0.5",
-    "python-dotenv>=1.2.3",
-    "requests>=2.34.2",
-    "rich>=15.0.0",
-    "scipy>=1.18.0",
+description = "Fantacalcio Automated Builder & Integer Optimizer (MILP)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Federico Bertossi" }
 ]
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.12.0",
+    "pandas>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "rich>=13.0.0",
+    "scipy>=1.11.0",
+]
+keywords = ["fantacalcio", "optimization", "milp", "knapsack", "serie-a", "fantasy-football"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.urls]
+Homepage = "https://github.com/mrBymax/fabio"
+Repository = "https://github.com/mrBymax/fabio"
+
+[project.scripts]
+fabio = "src.auction_cli:main"

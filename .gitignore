@@ -196,7 +196,16 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-dataset/
-gemini.md
+# IDE
+.idea/
+.vscode/
 
-idea/
+# Datasets & Scraped Data (Keep demo dataset public, keep live datasets private)
+dataset/*
+!dataset/demo_quotazioni.csv
+!dataset/.gitkeep
+*.xlsx
+
+# Internal Documentation / Scratch
+gemini.md
+scratch/

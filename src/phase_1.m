@@ -1,7 +1,10 @@
 clear; clc;
 
 % Load the dataset
-path = fullfile(fileparts(mfilename("fullpath")), '..', 'dataset','quotazioni_fantacalcio.csv');
+path = fullfile(fileparts(mfilename("fullpath")), '..', 'dataset', 'quotazioni_fantacalcio.csv');
+if ~isfile(path)
+    path = fullfile(fileparts(mfilename("fullpath")), '..', 'dataset', 'demo_quotazioni.csv');
+end
 data = readtable(path, 'TextType','string');
 
 % 2. Problem Parameters
